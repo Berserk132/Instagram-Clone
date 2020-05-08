@@ -21,7 +21,7 @@ Auth::routes();
 
 
 
-
+Route::post('/follow/{user}', 'FollowsController@store');
 
 
 Route::get('/p/create', 'PostsController@create');

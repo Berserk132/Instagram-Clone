@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <img class="w-100 h-100" src="/storage/{{$post->image}}"/>
+                <img class="w-100 h-100" src="/storage/{{$post->user->profile->getImage()}}"/>
             </div>
             <div class="col-6 ">
                 <div class="d-flex justify-content-start align-items-center">

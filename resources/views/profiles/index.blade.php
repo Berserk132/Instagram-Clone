@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-2 col-md-4 col-lg-3">
-            <img class="rounded-circle" style="max-width: 10rem" alt="" src="/storage/{{ $user->profile->image }}"/>
+            <img class="rounded-circle" style="max-width: 10rem" alt="" src="{{ $user->profile->getImage() }}"/>
         </div>
         <div class="col-xl-10 col-md-9 col-lg-9">
             <div class="d-flex  justify-content-between align-items-baseline">
@@ -13,6 +13,7 @@
                     <a style="color: #000;text-decoration: none" href="{{url('/p/create')}}"><button class="btn btn-outline-primary">Add New Post</button></a>
                 @endcan
             </div>
+                <follow-button user-id = {{$user->id}}></follow-button>
             <div>
                 @can('update', $user->profile)
 
